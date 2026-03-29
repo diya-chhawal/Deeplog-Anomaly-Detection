@@ -1,0 +1,4 @@
+torch
+boto3==1.38.23
+spellpy==0.0.9
+pandas
