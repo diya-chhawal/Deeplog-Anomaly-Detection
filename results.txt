@@ -1,0 +1,61 @@
+DeepLog Anomaly Detection Results
+
+Dataset: OpenStack logs
+
+--------------------------------------------------
+
+Experiment 1:
+Threshold = 25
+Result:
+- No anomalies detected
+- Precision = 0
+- Recall = 0
+
+Observation:
+Threshold too high → model fails to detect anomalies
+
+--------------------------------------------------
+
+Experiment 2:
+Threshold = 10
+Result:
+- TP: 59, FP: 404
+- Precision = 0.12
+- Recall = 0.42
+
+Observation:
+Lower threshold improves detection but increases false positives
+
+--------------------------------------------------
+
+Experiment 3:
+Threshold = 15
+Result:
+- No anomalies detected
+- Precision = 0
+- Recall = 0
+
+Observation:
+Model becomes too strict again
+
+--------------------------------------------------
+
+Experiment 4 (Final):
+Threshold = 12
+num-candidates = 20
+
+Result:
+- TP: 19, FP: 115
+- Precision: 0.14
+- Recall: 0.14
+- F1 Score: 0.14
+
+Observation:
+Balanced configuration achieved moderate performance
+
+--------------------------------------------------
+
+Conclusion:
+Model performance is highly sensitive to threshold and candidate size.
+There is a trade-off between precision and recall.
+Optimal tuning is required for effective anomaly detection.
